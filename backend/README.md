@@ -1,6 +1,6 @@
 ﻿# Task Manager Backend
 
-# WorkSync Pro – Backend
+# WorkSync Pro 
 
 WorkSync Pro Backend is a production-grade REST API built using Node.js, Express, and MongoDB.  
 It handles authentication, role-based access control, shift scheduling, shift swap workflows,
@@ -42,3 +42,4 @@ task management, audit logging, and admin analytics.
 ### 1️⃣ Install dependencies
 ```bash
 npm install
+
