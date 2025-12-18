@@ -1,0 +1,555 @@
+{
+	"info": {
+		"_postman_id": "21ed3a64-37ab-43bf-84b7-cd4c98185838",
+		"name": "task_manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "36841225"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "bulk assign task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDAwOGVjNjk2YTViNjhiMzdjMmYzYyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NTgyMjMyOCwiZXhwIjoxNzY1OTA4NzI4fQ.9BO-GDc2ZKz5ImQxW8vRPDJfF1KeAVjmtlpH8tlCMiI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"taskIds\": [\r\n    \"69406afc3971bb755e83cc58\",\r\n    \"69406afc3971bb755e83cc58\"\r\n  ],\r\n  \"userId\": \"693db4a390c88baa334de13b\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/admin/bulk-assign"
+					},
+					"response": []
+				},
+				{
+					"name": "admin analytics",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDAwOGVjNjk2YTViNjhiMzdjMmYzYyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NTgyMjMyOCwiZXhwIjoxNzY1OTA4NzI4fQ.9BO-GDc2ZKz5ImQxW8vRPDJfF1KeAVjmtlpH8tlCMiI"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/admin/analytics"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Admin User\",\r\n  \"email\": \"admin@company.com\",\r\n  \"password\": \"Password123\",\r\n  \"role\": \"ADMIN\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000 /api/auth/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"admin@company.com\",\r\n  \"password\": \"Password123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "employee3 register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Employee3\",\r\n  \"email\": \"employee3@company.com\",\r\n  \"password\": \"Employee3\",\r\n  \"role\": \"EMPLOYEE\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000 /api/auth/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "manager register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Manager 1 \",\r\n  \"email\": \"manager@company.com\",\r\n  \"password\": \"Manager123\",\r\n  \"role\": \"MANAGER\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000 /api/auth/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "employee 2 register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDAwOGVjNjk2YTViNjhiMzdjMmYzYyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NTgyMjMyOCwiZXhwIjoxNzY1OTA4NzI4fQ.9BO-GDc2ZKz5ImQxW8vRPDJfF1KeAVjmtlpH8tlCMiI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Employee2 \",\r\n  \"email\": \"employee2@company.com\",\r\n  \"password\": \"Employee2\",\r\n  \"role\": \"EMPLOYEE\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000 /api/auth/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "employee 1 login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n  \"email\": \"employee1@company.com\",\r\n  \"password\": \"Employee1\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000 /api/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "manager login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n     \"email\": \"manager@company.com\",\r\n     \"password\": \"Manager123\"\r\n   }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000 /api/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "swap",
+			"item": [
+				{
+					"name": "employee_swap_request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDJhZTMyOTg1MjliNDQxOGI2NmVmNSIsInJvbGUiOiJFTVBMT1lFRSIsImlhdCI6MTc2NTk3NzY5MiwiZXhwIjoxNzY2MDY0MDkyfQ.RFu_uiB4RN1oBFZjg9g8RlA-kMigpeuY7aP8yymtAYk"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"requesterShiftId\": \"6942aea998529b4418b66efc\",\r\n  \"targetShiftId\": \"6942aec598529b4418b66efe\",\r\n  \"targetOwnerId\": \"6942aea498529b4418b66ef8\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/swaps"
+					},
+					"response": []
+				},
+				{
+					"name": "manager_swap_request_respond",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDEyMDQ2NDFmY2E3YjVmNTZiZjBlNiIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzY1OTc1NDY1LCJleHAiOjE3NjYwNjE4NjV9.ojqdIMfYoPmHN1PZWqX26k-m_xSKYxuv6yXORad4i_Q"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"action\": \"APPROVE\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/swaps/6942b74c98529b4418b66f0a/respond"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "shift",
+			"item": [
+				{
+					"name": "get shifts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDAwOGVjNjk2YTViNjhiMzdjMmYzYyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NTkwODk0NiwiZXhwIjoxNzY1OTk1MzQ2fQ.u8kmDirLpqM1Lq18_XGkCwegUC0vWo2W5-2uFSOmn3M"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/shifts"
+					},
+					"response": []
+				},
+				{
+					"name": "create shift",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDEyMDQ2NDFmY2E3YjVmNTZiZjBlNiIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzY2MDUxOTE5LCJleHAiOjE3NjYxMzgzMTl9.oCGqb7hbctzWOBkyUyRcXDqfYLlUsgLzAHqAhnjHT8w"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"123 Shift\",\r\n  \"startTime\": \"2025-01-20T18:30:00.000Z\",\r\n  \"endTime\": \"2025-01-20T22:00:00.000Z\",\r\n  \"roleRequired\": \"EMPLOYEE 3\",\r\n  \"location\": \"Office D\",\r\n  \"assignedTo\": \"6943f131a79d35ce39398e56\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/shifts"
+					},
+					"response": []
+				},
+				{
+					"name": "update shift",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDEyMDQ2NDFmY2E3YjVmNTZiZjBlNiIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzY2MDUxOTE5LCJleHAiOjE3NjYxMzgzMTl9.oCGqb7hbctzWOBkyUyRcXDqfYLlUsgLzAHqAhnjHT8w"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"startTime\": \"2025-01-20T10:00:00.000Z\",\r\n  \"endTime\": \"2025-01-20T16:00:00.000Z\",\r\n  \"assignedTo\": \"6942ae3298529b4418b66ef5\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/shifts/6942ae3298529b4418b66ef5"
+					},
+					"response": []
+				},
+				{
+					"name": "publish shift employye 1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDEyMDQ2NDFmY2E3YjVmNTZiZjBlNiIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzY1OTc1NDY1LCJleHAiOjE3NjYwNjE4NjV9.ojqdIMfYoPmHN1PZWqX26k-m_xSKYxuv6yXORad4i_Q"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:5000/api/shifts/6942aea998529b4418b66efc/publish"
+					},
+					"response": []
+				},
+				{
+					"name": "delete shift",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDAwOGVjNjk2YTViNjhiMzdjMmYzYyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NTkwODk0NiwiZXhwIjoxNzY1OTk1MzQ2fQ.u8kmDirLpqM1Lq18_XGkCwegUC0vWo2W5-2uFSOmn3M"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/shifts/6941a152f41ead4102d31c77"
+					},
+					"response": []
+				},
+				{
+					"name": "publish shift employee 2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDEyMDQ2NDFmY2E3YjVmNTZiZjBlNiIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzY1OTc1NDY1LCJleHAiOjE3NjYwNjE4NjV9.ojqdIMfYoPmHN1PZWqX26k-m_xSKYxuv6yXORad4i_Q"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:5000/api/shifts/6942aec598529b4418b66efe/publish"
+					},
+					"response": []
+				},
+				{
+					"name": "assign shift employee 1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDEyMDQ2NDFmY2E3YjVmNTZiZjBlNiIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzY1OTc1NDY1LCJleHAiOjE3NjYwNjE4NjV9.ojqdIMfYoPmHN1PZWqX26k-m_xSKYxuv6yXORad4i_Q"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"assignedTo\": \"6942ae3298529b4418b66ef5\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/shifts/6942aea998529b4418b66efc"
+					},
+					"response": []
+				},
+				{
+					"name": "assign shift employee 2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDEyMDQ2NDFmY2E3YjVmNTZiZjBlNiIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzY1OTc1NDY1LCJleHAiOjE3NjYwNjE4NjV9.ojqdIMfYoPmHN1PZWqX26k-m_xSKYxuv6yXORad4i_Q"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"assignedTo\": \"6942ae4a98529b4418b66ef8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/shifts/6942aec598529b4418b66efe"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDAwOGVjNjk2YTViNjhiMzdjMmYzYyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NjA1OTQ2MywiZXhwIjoxNzY2MTQ1ODYzfQ.yAmrvwX6WytpjCQxLnjpKUQxdjvz02DU5aY0Pwx52kk"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/admin/activity-logs"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "Get task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDAwOGVjNjk2YTViNjhiMzdjMmYzYyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NTgyMjMyOCwiZXhwIjoxNzY1OTA4NzI4fQ.9BO-GDc2ZKz5ImQxW8vRPDJfF1KeAVjmtlpH8tlCMiI"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/tasks"
+					},
+					"response": []
+				},
+				{
+					"name": "create task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDAwOGVjNjk2YTViNjhiMzdjMmYzYyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NTgyMjMyOCwiZXhwIjoxNzY1OTA4NzI4fQ.9BO-GDc2ZKz5ImQxW8vRPDJfF1KeAVjmtlpH8tlCMiI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Prepare Monthly Report\",\r\n  \"description\": \"Finance and KPI summary\",\r\n  \"priority\": \"HIGH\",\r\n  \"status\": \"TODO\",\r\n  \"dueDate\": \"2025-01-31T18:30:00.000Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/tasks"
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDAwOGVjNjk2YTViNjhiMzdjMmYzYyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NTgyMjMyOCwiZXhwIjoxNzY1OTA4NzI4fQ.9BO-GDc2ZKz5ImQxW8vRPDJfF1KeAVjmtlpH8tlCMiI"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"priority\": \"low\" \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/tasks/69406afc3971bb755e83cc58"
+					},
+					"response": []
+				},
+				{
+					"name": "assign task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDAwOGVjNjk2YTViNjhiMzdjMmYzYyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NTgyMjMyOCwiZXhwIjoxNzY1OTA4NzI4fQ.9BO-GDc2ZKz5ImQxW8vRPDJfF1KeAVjmtlpH8tlCMiI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"assignedTo\": \"693db4a390c88baa334de13b\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/tasks/69406afc3971bb755e83cc58/assign"
+					},
+					"response": []
+				},
+				{
+					"name": "transfer task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDAwOGVjNjk2YTViNjhiMzdjMmYzYyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NTgyMjMyOCwiZXhwIjoxNzY1OTA4NzI4fQ.9BO-GDc2ZKz5ImQxW8vRPDJfF1KeAVjmtlpH8tlCMiI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"newOwnerId\": \"693db6adfdfd0347e87d01e7\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/tasks/69406afc3971bb755e83cc58/transfer-shift"
+					},
+					"response": []
+				},
+				{
+					"name": "get all tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDAwOGVjNjk2YTViNjhiMzdjMmYzYyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NTgyMjMyOCwiZXhwIjoxNzY1OTA4NzI4fQ.9BO-GDc2ZKz5ImQxW8vRPDJfF1KeAVjmtlpH8tlCMiI"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/tasks"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": []
+		}
+	]
+}
