@@ -1,16 +1,60 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# 🎨 FRONTEND README  
+📁 `frontend/README.md`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```md
+# WorkSync Pro – Frontend
 
-## React Compiler
+WorkSync Pro Frontend is a modern, responsive React application that provides
+role-based dashboards for Admins, Managers, and Employees.
+It integrates seamlessly with the backend REST API.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js (Vite)
+- React Router
+- Axios
+- Tailwind CSS
+- Context API (Auth & Global State)
+
+---
+
+## 👥 Role-Based Views
+
+### 👑 Admin
+- Dashboard & analytics
+- View audit logs
+- Manage users, shifts, tasks
+
+### 🧑‍💼 Manager
+- Create & assign shifts
+- Approve/reject swap requests
+- Create & assign tasks
+
+### 👨‍🔧 Employee
+- View personal shifts
+- Request shift swaps
+- Manage tasks via drag-and-drop board
+
+---
+
+## ✨ Key Features
+
+### 🗂️ Task Board
+
+### 🔄 Shift Swap UI
+
+### 📝 Audit Logs (Admin)
+
+### 🔐 Authentication
+---
+
+## 🛠️ Setup Instructions
+
+### 1️⃣ Install dependencies
+```bash
+npm install
